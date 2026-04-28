@@ -273,7 +273,12 @@ This Calcium Imaging Data Analysis Pipeline was developed with contributions fro
 
 **Authors:**
 - Keerthana Natarajan
-- Hemanth Mydugolam — hemanth.mydugolam@gmail.com
+- Urzula, Enzastiga
+- Hemanth Mydugolam 
+
+For questions, bug reports, or feature requests, please feel free to reach out to **Hemanth Mydugolam**:
+- hemanth.mydugolam@gmail.com
+- hemanth.mydugolam@utdallas.edu
 
 ---
 
