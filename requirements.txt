@@ -1,0 +1,5 @@
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+openpyxl>=3.1       # required by pandas for reading .xlsx files
+PyYAML>=6.0

@@ -1,0 +1,85 @@
+# =============================================================================
+# Calcium Imaging Pipeline — User Configuration
+# =============================================================================
+# Edit ONLY this file to configure the pipeline for your experiment.
+# All frame indices below are 0-based (row 0 = first data row).
+# =============================================================================
+
+# Name for this run — used as the output subfolder (e.g. Output/Run1/)
+run_name: "Run1"
+
+# -----------------------------------------------------------------------------
+# Frame Boundaries
+# Each value marks the LAST frame (exclusive upper bound) of that period.
+#
+#  |<-- baseline -->|<-- Stim1 -->|<-- Wash -->|<-- Stim2 -->|
+#  0            250             350           500            600
+# -----------------------------------------------------------------------------
+frame_boundaries:
+  baseline_end: 250      # Last frame of the baseline period
+  stimulus1_end: 350     # Last frame of Stimulus 1
+  wash_end: 500          # Last frame of the wash period (= end of Stim1 analysis window)
+  stimulus2_end: 600     # Last frame of Stimulus 2 (= end of Stim2 analysis window)
+
+# -----------------------------------------------------------------------------
+# Normalization
+# Fluorescence values are divided by the mean of the last N frames of baseline.
+# -----------------------------------------------------------------------------
+normalization:
+  avg_baseline_frames: 250   # Number of frames at end of baseline used to compute F0
+
+# -----------------------------------------------------------------------------
+# Baseline Reference Frames for Latency Calculations
+# The frame used as the "time zero" when counting frames-to-threshold.
+#   stimulus1 → typically equal to baseline_end
+#   stimulus2 → typically equal to wash_end
+# -----------------------------------------------------------------------------
+baseline_reference_frames:
+  stimulus1: 250
+  stimulus2: 500
+
+# -----------------------------------------------------------------------------
+# Response Thresholds
+# A neuron must exceed (baseline_value × (1 + percent/100)) to be counted.
+# -----------------------------------------------------------------------------
+thresholds:
+  stimulus1_percent: 20   # % above end-of-baseline for Stim1 latency calculation
+  stimulus2_percent: 30   # % above end-of-wash for Stim2 latency calculation
+
+# -----------------------------------------------------------------------------
+# Spike Detection (Yes / No Classification)
+# Used for the stacked bar chart and the Stimulus_1 / Stimulus_2 rows in the
+# normalized CSV.  A neuron is marked "Yes" if it exceeds this % above the
+# last baseline frame at any point in the corresponding analysis window.
+# Stimulus 1 window : baseline_end → wash_end - 1
+# Stimulus 2 window : wash_end    → stimulus2_end
+# -----------------------------------------------------------------------------
+spike_detection_percent: 10
+
+# -----------------------------------------------------------------------------
+# Plot Annotations
+# Vertical dashed green lines drawn on every individual-trace plot.
+#   position : the x-axis value (time in seconds) for the line
+#   label    : text label placed at the top of the line
+# -----------------------------------------------------------------------------
+plot:
+  vertical_lines:
+    - position: 307
+      label: "Capsaicin"
+    - position: 430
+      label: "Wash"
+    - position: 615
+      label: "High K\u207A"   # High K⁺  (Unicode superscript plus)
+
+# -----------------------------------------------------------------------------
+# File Paths  (relative to the project root — do not add leading slashes)
+# -----------------------------------------------------------------------------
+paths:
+  input_dir:               "Input"
+  output_dir:              "Output"
+  background_columns_file: "Input/Background_Columns_Data/Background_Columns.xlsx"
+
+  # Optional: path to an Excel file (.xlsx) whose FIRST column contains the
+  # time values (in seconds) used for x-axis labels on all plots.
+  # If the file does not exist the pipeline falls back to frame indices.
+  time_axis_file: "Input/X_axis_time.xlsx"
