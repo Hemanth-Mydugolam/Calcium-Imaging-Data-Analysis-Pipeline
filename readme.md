@@ -108,8 +108,8 @@ Each coverslip is a single Excel file. The pipeline processes **all `.xlsx` file
 | `R1 W4 Area` | — | **Automatically excluded** (any column containing "Area") |
 | … | … | Additional ROIs follow the same pattern |
 
-- The first row should be column headers (no metadata rows above).
-- The sheet used is always the **first sheet** (Sheet1).
+- Each file must contain **exactly one sheet** with only the time points, ROI columns, and background columns — no additional sheets, metadata rows, or summary tables.
+- The first row must be column headers (no metadata rows above).
 - File names become the folder names in the output (e.g., `cv1.xlsx` → `Output/Run1/cv1/`).
 
 **Example layout:**
