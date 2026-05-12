@@ -22,6 +22,24 @@ Where `R#` = ROI number and `W4` = wavelength/channel identifier. This naming co
 
 ---
 
+## Prerequisites
+
+**Python 3.10 or later** must be installed on your computer before running the pipeline.
+
+To check if Python is already installed, open a terminal/command prompt and run:
+
+```bash
+python --version
+```
+
+If you see a version number (e.g., `Python 3.11.2`), you're good to go. If not, or if the version is below 3.10, download and install the latest version from the official Python website:
+
+[https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+> **Tip (Windows users):** During installation, make sure to check the box **"Add Python to PATH"** before clicking Install — this is required for the `pip` and `python` commands to work in the terminal.
+
+---
+
 ## Quick Start
 
 ### 1. Get the repository
