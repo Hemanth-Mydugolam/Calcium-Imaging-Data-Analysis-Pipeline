@@ -13,7 +13,7 @@ Outputs per coverslip (inside Output/<run_name>/<coverslip_name>/):
     Peak value of each column.csv    — peak, frames-to-peak, latency, AUC per neuron
     <ROI>_plot.jpg                   — individual fluorescence trace per ROI
     <coverslip>- All flourecence Traces.jpg — overlay of all traces
-    Existance_Yes_No_plot.png        — stacked bar chart of Yes/No response counts
+    Existence_Yes_No_plot.png        — stacked bar chart of Yes/No response counts
 """
 
 from __future__ import annotations
@@ -459,7 +459,7 @@ def plot_spike_detection_bar(
             ax.text(r_no.get_x() + r_no.get_width() / 2, h_yes + h_no / 2,
                     f"{int(h_no)}", ha="center", va="center", color="white", fontweight="bold")
 
-    fig.savefig(output_dir / "Existance_Yes_No_plot.png", bbox_inches="tight")
+    fig.savefig(output_dir / "Existence_Yes_No_plot.png", bbox_inches="tight")
     plt.close(fig)
 
 

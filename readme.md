@@ -262,11 +262,11 @@ One row per ROI with the following metrics:
 
 Individual fluorescence trace (F/F₀ vs. time) for each ROI, with annotated vertical lines marking stimulus transitions.
 
-### `<coverslip>- All flourecence Traces.jpg`
+### `<coverslip>- All flourescence Traces.jpg`
 
 Overlay of all ROI traces for at-a-glance inspection of the population response.
 
-### `Existance_Yes_No_plot.png`
+### `Existence_Yes_No_plot.png`
 
 Stacked bar chart showing the number of ROIs classified as responding (`Yes`) or non-responding (`No`) for Stimulus 1 and Stimulus 2.
 
