@@ -175,7 +175,9 @@ run_name: "Run1"          # Output subfolder — change per experiment to avoid 
 ```
 
 #### Frame boundaries
-Define the temporal structure of your experiment. All values are 0-based frame indices.
+Set the frame duration for each phase of your experiment — baseline, Stimulus 1, wash, and Stimulus 2 — by updating the boundary frame numbers below.
+
+> **Note:** This pipeline is designed for a fixed experimental structure: **Baseline → Stimulus 1 → Wash → Stimulus 2**. It will not work for designs with a different number of stimuli or phases.
 
 ```
 |<------ baseline ----->|<-- Stim1 -->|<------ Wash ------>|<-- Stim2 -->|
