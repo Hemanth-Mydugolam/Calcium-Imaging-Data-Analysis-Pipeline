@@ -166,7 +166,7 @@ An Excel file with a single column containing the time values (in seconds) corre
 
 ## Configuration
 
-To customize the pipeline for your experiment, just open `config.yaml` and update the settings.
+To customize the pipeline for your experiment, open config.yaml in any text editor (e.g., Notepad++) and update the settings.
 
 ### Key parameters
 
