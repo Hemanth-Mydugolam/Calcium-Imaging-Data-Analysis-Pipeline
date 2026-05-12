@@ -175,12 +175,12 @@ run_name: "Run1"          # Output subfolder — change per experiment to avoid 
 ```
 
 #### Frame boundaries
-Set the frame duration for each phase of your experiment — baseline, Stimulus 1, wash, and Stimulus 2 — by updating the boundary frame numbers below.
+Set the frame duration for each phase of your experiment — Baseline, Stimulus 1, Wash, and Stimulus 2 — by updating the boundary frame numbers below.
 
 > **Note:** This pipeline is designed for a fixed experimental structure: **Baseline → Stimulus 1 → Wash → Stimulus 2**. It will not work for designs with a different number of stimuli or phases.
 
 ```
-|<------ baseline ----->|<-- Stim1 -->|<------ Wash ------>|<-- Stim2 -->|
+|<------ Baseline ----->|<-- Stim1 -->|<------ Wash ------>|<-- Stim2 -->|
 0                      250           350                  500           600
 ```
 
@@ -240,7 +240,7 @@ Full-length normalized (F/F₀) traces for all ROIs, with appended metadata rows
 |-----------|-------------|
 | `Stimulus_1` | Per-ROI Yes/No spike detection for the Stimulus 1 window |
 | `Stimulus_2` | Per-ROI Yes/No spike detection for the Stimulus 2 window |
-| `Stimulus1_2_Wash_AUC` | Trapezoidal AUC over the Stim1+Wash window (frame interval = 1.5 s) |
+| `Stimulus1_2_Wash_AUC` | Trapezoidal AUC over the Stim1+Wash window |
 | `Stimulus_2_AUC` | Trapezoidal AUC over the Stim2 window |
 
 ### `Peak value of each column.csv`
