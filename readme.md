@@ -1,12 +1,12 @@
 # Calcium Imaging Data Analysis Pipeline
 
-Python pipeline for batch processing fluorescence calcium imaging data from coverslip-based neuronal preparations. The pipeline performs background subtraction, F/F₀ normalization, spike detection, peak analysis, latency-to-threshold calculations, AUC computation, and automated figure generation.
+Python pipeline for batch processing fluorescence calcium imaging data from coverslip-based neuronal preparations. The pipeline performs background subtraction, F/F₀ normalization, spike detection, peak analysis, latency-to-threshold calculations, AUC computation, and plots response trances.
 
 ---
 
 ## Compatible Imaging Software
 
-This pipeline is designed for data exported from **widefield fluorescence calcium imaging systems** where regions of interest (ROIs) are drawn around individual neurons and mean fluorescence values are exported to Excel.
+This pipeline is designed for data exported from **fluorescence calcium imaging systems** where regions of interest (ROIs) are drawn around individual neurons and mean fluorescence values are exported to Excel.
 
 It has been developed and validated with data from experiments using fluorescence microscopy rigs where acquisition/analysis software exports ROI measurements in the column format:
 
@@ -16,11 +16,9 @@ Time (sec) | R1 W4 Avg | R2 W4 Avg | R3 W4 Avg | ...
 
 Where `R#` = ROI number and `W4` = wavelength/channel identifier. This naming convention is produced by systems such as:
 
-- **Nikon NIS-Elements** (with ROI time-series export)
-- **Olympus cellSens / Olympus FluoView**
 - **Metamorph / MetaFluor** (Molecular Devices)
 
-> **Check compatibility:** Open one of your coverslip `.xlsx` files. If the columns follow the `R# W# Avg` pattern with a `Time (sec)` first column, this pipeline will work for your data.
+> **Check compatibility:** Open one of your coverslip `.xlsx` files. If the columns follow the `R# W# Avg` pattern with a `Time (sec)` as first column, this pipeline will work for your data.
 
 ---
 
@@ -142,7 +140,7 @@ Time (sec)  | R1 W4 Avg | R1 W4 Area | R2 W4 Avg | R2 W4 Area | ...
 
 ### Background columns file (`Input/Background_Columns_Data/Background_Columns.xlsx`)
 
-This file maps each coverslip to its designated background ROI column(s). Background ROIs are drawn over cell-free areas of the coverslip to correct for non-specific fluorescence and drift.
+This file maps each coverslip to its designated background ROI column(s). Background ROIs are drawn over cell-free areas of the coverslip to correct for non-specific fluorescence.
 
 **Required columns:**
 
@@ -168,7 +166,7 @@ An Excel file with a single column containing the time values (in seconds) corre
 
 ## Configuration
 
-All user-facing parameters live in `config.yaml`. You should **never need to edit `pipeline.py`** to change experimental settings.
+All user-facing parameters are in `config.yaml`, you will need to edit this cofig file alone. You **don't need to edit `pipeline.py`**.
 
 ### Key parameters
 
@@ -209,7 +207,7 @@ thresholds:
   stimulus2_percent: 30   # % above wash-end to register a Stim2 latency
 ```
 
-#### Spike detection (Yes / No)
+#### Response detection (Yes / No)
 ```yaml
 spike_detection_percent: 10   # Any frame exceeding baseline × 1.10 → "Yes"
 ```

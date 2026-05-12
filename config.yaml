@@ -47,7 +47,7 @@ thresholds:
   stimulus2_percent: 30   # % above end-of-wash for Stim2 latency calculation
 
 # -----------------------------------------------------------------------------
-# Spike Detection (Yes / No Classification)
+# Response Detection (Yes / No Classification)
 # Used for the stacked bar chart and the Stimulus_1 / Stimulus_2 rows in the
 # normalized CSV.  A neuron is marked "Yes" if it exceeds this % above the
 # last baseline frame at any point in the corresponding analysis window.
