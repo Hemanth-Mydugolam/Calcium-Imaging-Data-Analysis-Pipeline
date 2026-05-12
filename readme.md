@@ -166,7 +166,7 @@ An Excel file with a single column containing the time values (in seconds) corre
 
 ## Configuration
 
-All user-facing parameters are in `config.yaml`, you will need to edit this cofig file alone. You **don't need to edit `pipeline.py`**.
+To customize the pipeline for your experiment, just open `config.yaml` and update the settings.
 
 ### Key parameters
 
