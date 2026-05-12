@@ -158,12 +158,11 @@ This file maps each coverslip to its designated background ROI column(s). Backgr
 
 ---
 
-### Time axis file (`Input/X_axis_time.xlsx`) — *Optional*
+### Time axis file (`Input/X_axis_time.xlsx`) —
 
 An Excel file with a single column containing the time values (in seconds) corresponding to each frame. Used to label the x-axis of all plots.
 
 - The **first column** of the first sheet is used.
-- If this file is not present, frame indices (0, 1, 2, …) are used on the x-axis instead.
 
 ---
 
