@@ -1,6 +1,6 @@
 # Calcium Imaging Data Analysis Pipeline
 
-A production-ready Python pipeline for batch processing fluorescence calcium imaging data from coverslip-based neuronal preparations. The pipeline performs background subtraction, F/F₀ normalization, spike detection, peak analysis, latency-to-threshold calculations, AUC computation, and automated figure generation.
+Python pipeline for batch processing fluorescence calcium imaging data from coverslip-based neuronal preparations. The pipeline performs background subtraction, F/F₀ normalization, spike detection, peak analysis, latency-to-threshold calculations, AUC computation, and automated figure generation.
 
 ---
 
@@ -26,12 +26,29 @@ Where `R#` = ROI number and `W4` = wavelength/channel identifier. This naming co
 
 ## Quick Start
 
-### 1. Clone the repository
+### 1. Get the repository
+
+**Option A — Git clone (recommended if you have Git installed):**
 
 ```bash
 git clone https://github.com/Hemanth-Mydugolam/Calcium-Imaging-Data-Analysis-Pipeline.git
 cd Calcium-Imaging-Data-Analysis-Pipeline
 ```
+
+**Option B — Download as ZIP (no Git required):**
+
+1. Go to the repository page on GitHub: [https://github.com/Hemanth-Mydugolam/Calcium-Imaging-Data-Analysis-Pipeline](https://github.com/Hemanth-Mydugolam/Calcium-Imaging-Data-Analysis-Pipeline)
+2. Click the green **`< > Code`** button near the top right.
+3. Select **Download ZIP** from the dropdown.
+4. Once downloaded, **extract (unzip)** the folder to a location of your choice (e.g., your Desktop or Documents folder).
+5. Open a terminal/command prompt and navigate into the extracted folder:
+
+```bash
+# Replace the path below with wherever you extracted the folder
+cd ~/Desktop/Calcium-Imaging-Data-Analysis-Pipeline-main
+```
+
+> **Note:** The extracted folder will be named `Calcium-Imaging-Data-Analysis-Pipeline-main` by default (GitHub appends `-main` to ZIP downloads). You can rename it if you prefer.
 
 ### 2. Install dependencies
 
