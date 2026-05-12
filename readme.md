@@ -292,7 +292,7 @@ This Calcium Imaging Data Analysis Pipeline was developed with contributions fro
 - Urzula, Enzastiga
 - Hemanth Mydugolam 
 
-For questions, bug reports, or feature requests, please feel free to reach out to **Hemanth Mydugolam**:
+For questions, bug reports, or feature requests, please [open an issue on GitHub](https://github.com/Hemanth-Mydugolam/Calcium-Imaging-Data-Analysis-Pipeline/issues) or reach out to **Hemanth Mydugolam** directly:
 - hemanth.mydugolam@gmail.com
 - hemanth.mydugolam@utdallas.edu
 
